@@ -1,0 +1,82 @@
+.hero{
+    position: relative;
+    min-height: 93vh;
+    @media screen and (max-width:376px){
+        min-height: 115vh;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        @media screen and (max-width:1024px) {
+            flex-direction: column;
+
+        }
+    }
+    &__text{
+        text-align: left;
+        position: relative;
+        @media screen and (max-width:1025px) {
+            text-align: center;
+            order: 2;
+
+        }
+        
+        h1{
+            font-size: 52px;
+            color: $Darkblue;
+            font-weight: 700;
+            width: 90%;
+            margin: 0;
+            position: relative;
+
+            @media screen and (max-width:1025px){
+                width: 100%;
+                font-size: 38px;
+            }
+            @media screen and (max-width:1325px){
+                width: 100%;
+                font-size: 40px;
+            }
+
+        }
+        p{
+            color: $Darkgrayishblue;
+            font-size: 15px;
+            font-weight: 400;
+            max-width: 50%;
+            margin-bottom: 45px;
+            position: relative;
+
+            @media screen and (max-width:1025px){
+                max-width: 100%;
+                font-size: 18px;
+                line-height: 1.5;
+                font-weight: 400;
+                color: $Darkgrayishblue;
+            }
+
+        }
+    }
+
+    &__image{
+        position: relative;
+        img{
+            position: relative;
+            @media screen and (max-width:1025px){
+                width: 500px;
+                height: 500px;
+            }
+            @media screen and (max-width:1125px){
+                width: 390px;
+                height: 400px;
+            }
+        }
+    }
+    &__cta{
+        position: relative;
+    }
+}

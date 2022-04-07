@@ -1,0 +1,117 @@
+.product{
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap: 110px;
+
+        @media screen and (max-width: 1025px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        
+        }
+    }
+    &__manage{
+        @media screen and (max-width: 1025px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1{
+            color: $Darkblue;
+            font-size: 38px;
+            font-weight: 700;
+            max-width: 80%;
+            @media screen and (max-width: 1025px) {
+                font-size: 32px;
+            }
+
+        }
+        p{
+            font-size: 20px;
+            color: $Darkgrayishblue;
+            font-weight: 300;
+            max-width: 70%;
+            @media screen and (max-width: 1025px) {
+                font-size: 18px;
+                max-width: 100%;
+                margin: 0px;
+            }
+
+        }
+    }
+    &__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__id{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    &__number{
+        display: flex;
+        margin-right: 30px;
+        padding-top: 7px;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+        @media screen and (max-width: 1025px) {
+            gap: 10px;
+        }
+
+
+        h4{
+            color: #fff;
+            font-size: 14px;
+            background: $Brightred;
+            padding: 10px 23px;
+            border-radius: 50px;
+            position: relative;
+            @media screen and (max-width: 1025px) {
+                &::before{
+                    content: "";
+                    background: $Brightred;
+                    display: flex;
+                    position: absolute;
+                    left: 47px;
+                    width: 1000%;
+                    height: 100%;
+                    top: 0px;
+                    opacity: 0.25;
+                }
+            }
+
+        }
+        h6{
+            font-size: 15px;
+            position: relative;
+            color: darkblue;
+            font-weight: 700;
+            @media screen and (max-width: 1025px) {
+                font-size: 14px;
+            }            
+        }
+    }
+    &__information{
+        position: relative;
+        p{
+            padding-left: 91px;
+            color: $Darkgrayishblue;
+            font-weight: 300;
+            font-size: 15px;
+            margin: 0;
+
+            @media screen and (max-width: 1025px) {
+                padding-left: 0px;
+                font-size: 14px;
+                max-width: 95%;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.comments{
+    position: relative;
+    &__content{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title{
+        margin-top: 159px;
+        font-size: 25px;
+        color: $Darkblue;
+        font-weight: 700;
+        
+        @media screen and (max-width:376px){
+            margin-top: 19px;
+        }
+
+
+
+    }
+    &__images{
+        margin-top: 50px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        min-width: 110rem;
+        position: absolute;
+        top: 277px;
+        @media screen and (max-width:376px){
+            min-width: 65rem;
+            top: 107px;
+        }
+    }
+    &__perspective{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        justify-content: space-between;
+        background: rgb(241, 240, 240) ;
+        border-radius: 10px;
+        padding-top: 65px;
+        padding-bottom: 45px;
+        padding-left: 45px;
+        padding-right: 45px;
+        border: none;
+        outline: none;
+        img{
+            position: absolute;
+            width: 73px;
+            height: 73px;
+            top: -30px;
+        }
+        h3{
+            font-size: 15px;
+            color: $Darkblue;
+            font-weight: 700;
+        }
+        p{
+            font-size: 14px;
+            color: #9095a7;
+            font-weight: 500;
+            max-width: 80%;
+            @media screen and (max-width:376px){
+                max-width: 100%;
+                font-size: 13.5px;
+            }
+
+        }
+    }
+    &__dots{
+        @media screen and (max-width:376px) {
+            display: flex;
+            gap: 3px;
+            span{
+                padding: 2.7px;
+                border: 1px solid;
+                border-color: $Brightred;
+                margin-top: 350px;
+                border-radius: 50px;
+    
+                &:nth-child(2){
+                    background: $Brightred;
+                }
+            }
+        }   
+    }
+    &__cta{
+        margin-top: 345px;
+        cursor: pointer;
+
+        @media screen and (max-width:376px){
+            margin-top: 42px;
+        }
+
+    }
+}

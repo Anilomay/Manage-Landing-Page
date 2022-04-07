@@ -1,0 +1,125 @@
+.header{
+    position: relative;
+
+    &::before{
+        content: "";
+        background-size: 52%;
+        background-image: url('./bg-tablet-pattern.svg');
+        background-repeat: no-repeat;
+        background-position: 115% -35%;
+        position: absolute;
+        height: 800%;
+        width: 100%;
+
+        @media screen and(max-width:376px) {
+            height: 799%;
+            width: 136%;
+            background-size: 94%;
+        }
+    }
+
+    &.open{
+        position: relative;
+        .overlay{
+            z-index: 2;
+            display: block;
+        }
+        .header__toggle{
+            position: relative;
+            z-index: 2;
+            span:first-child{
+                transform: rotate(45deg);
+                background-color: #fff;
+            }
+            span:nth-child(2){
+                opacity: 0;
+            }
+            span:last-child{
+                transform: rotate(-45deg);
+                background-color: #fff;
+
+            }
+        }
+        .header__menu{
+            position: absolute;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            margin-top: 3rem;
+            width: calc(100% - 3rem);
+            left: 50%;
+            transform: translate(-50%);            
+            a{
+                font-size: 15px;
+                font-weight: 700;
+                color: $Verydarkblue;
+                margin-bottom: 35px;
+                &:first-child{
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+    .overlay{
+        display: none;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        background-image: linear-gradient(to bottom ,$Darkblue, transparent);
+    }
+    nav{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+    }
+    &__logo{
+        img{
+            width: 145px;
+            height: 25px;
+
+            @media screen and (max-width:376px){
+                width: 110px;
+                height: 18px;
+            }
+        }
+    }
+    &__text{
+        padding-bottom: 8px;
+
+        a{
+            color: $Verydarkblue;
+            font-size: 13px;
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+
+            &:hover{
+                color: $Darkgrayishblue;
+                transition: 0.4s ease-in-out;
+
+            }
+        }
+    }
+    &__toggle{
+        margin-bottom: 8.5px;
+        span{
+            display: block;
+            background-color: $Verydarkblue;
+            height: 4px;
+            width: 26px;
+            transform-origin: 3.3px 2.9px;
+            transition: 0.2s ease-in-out;
+            &:not(:last-child){
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

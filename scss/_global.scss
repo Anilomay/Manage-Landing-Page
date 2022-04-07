@@ -1,0 +1,87 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Be Vietnam' , sans-serif;
+    line-height: 1.3;
+    overflow-x: hidden;
+    height: 100%;
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+a , a:visited , a:hover{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+
+    &__all{
+        padding-top: 74px;
+        padding-left: 164px;
+        padding-right: 164px;
+
+        @media screen and (max-width:811px){
+            padding-right: 24px;
+            padding-left: 24px;
+            padding-top: 45px;
+        }
+    }
+    &__x{
+        padding-bottom: 0px;
+        padding-top: 74px;
+        padding-right: 164px;
+        padding-left: 164px;
+        @media screen and (max-width:811px){
+            padding-right: 24px;
+            padding-left: 24px;
+            padding-top: 0px;
+        }
+    }
+    &__last{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-right: 164px;
+        padding-left: 164px;
+        @media screen and (max-width:811px) {
+            padding-top: 50px;
+            padding-right: 26px;
+            padding-left: 26px;
+            padding-bottom: 29px;
+        }
+    }
+}
+
+.button{ 
+    color: #fff;
+    background: $Brightred;
+    padding: 16px 34px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }}
+
+.hide-for-mobile{
+    @media screen and (max-width: 1023px){
+        display: none;
+    }
+}
+.hide-for-desktop{
+    @media screen and (min-width: 1024px){
+        display: none;
+    }
+}
